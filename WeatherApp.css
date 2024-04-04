@@ -1,0 +1,242 @@
+ *,*::before,*::after{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Merriweather Sans',sans-serif;
+ }
+ body{
+   background-image: url('Stormclouds.jpg');
+   /* filter: blur(8px); */
+   /* backdrop-filter: blur(10px); */
+  
+
+ }
+ :root{
+   --colorDark1: #112D4E;
+   --colorDark2: #3F72AF;
+   --colorLight1: #DBE2EF;
+   --colorLight2: #F9F7F7;
+ }
+
+ .wrapper{
+     width: 100vw;
+     height: 100vh;
+     /* z-index: 2; */
+     color:var(--colorLight2) ; 
+     display: flex;
+     justify-content: center;
+ }
+
+ h1{
+   text-align: center;
+   text-transform: uppercase;
+   margin-top: 20px;
+   color: var(--WhiteColor);
+ }
+
+ 
+ .inner-wrapper{
+   /* border: 2px solid black; */
+   margin-top: 20px;
+   width: 70%;
+   height: 85%;
+   border-radius: 30px;
+   backdrop-filter: blur(20px);
+   border: 0.1px solid white;
+ }
+ .tab-container{
+   display: flex;
+   justify-content: space-around;
+   /* border: 2px solid blueviolet; */
+   margin-top: 40px;
+ }
+
+ .tab{
+   cursor: pointer;
+   font-size: 0.875rem;
+   letter-spacing: 1.75px;
+   padding: 5px;
+ } 
+
+ .tab.current-tab{
+   background-color: rgba(219, 226, 239, 0.5);
+   border-radius: 5px;
+   
+ }
+ 
+ .weather-container{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   margin-block: 4rem;
+ }
+ 
+ .btn{
+   all: unset;
+
+   /* iske through bhi kr skte ho */
+   /* appearance: none;
+   border:none;
+   color: white; */
+   font-size: 0.85rem;
+   text-transform: uppercase;
+   border-radius: 5px;
+   background-color: var(--colorDark2);
+   cursor: pointer;
+   padding: 10px 30px;
+   margin-bottom: 10px;
+   margin-top: 40px;
+}
+
+.grant-location-container{
+   /* display:none; */
+   opacity: 0;
+}
+
+.grant-location-container.active{
+   /* display:flex;  */
+   opacity: 1;
+}
+
+.Sub-container{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+#firstLine{
+font-size: 20PX;
+margin-top: 20px;
+font-weight: bold;
+}
+
+
+.loading-container{
+   display: none;
+}
+
+.loading-container.active{
+   display: flex;
+}
+
+.loading-container p{
+   text-transform: uppercase;
+   font-weight: bold;
+   font-size: large;
+}
+
+
+.user-info-container{
+   display: none;
+   /* margin: -20rem; */
+   margin-top: -25%;
+}
+
+.user-info-container.active{
+   display: flex;
+}
+
+.name{
+   display: flex;
+   align-items: center;
+   gap: 0 1rem;
+   margin-bottom: 1rem;
+}
+.name p{
+   font-size: 25px;
+}
+.name img{
+   height: 20px;
+}
+
+.weatherDetail{
+   font-size: 20px;
+}
+
+.weatherIcon{
+   height: 6rem;
+}
+
+.tempratureDetail{
+   font-size: 35px;
+   font-weight: bold;
+   margin-bottom: 20px;
+}
+
+.parameter-container{
+   display: flex;
+   justify-content: space-evenly;
+   /* border: 2px solid red; */
+   width: 120%;
+}
+.parameter{
+   background-color: rgba(219, 226, 239, 0.5);
+   padding: 12px;
+   width: 200px;
+   
+   
+}
+.parameter img{
+   height: 4rem;
+}
+
+.parameter p{
+   text-transform: uppercase;
+}
+
+.form-container{
+   /* opacity: 0; */
+/* display: none; */
+opacity: 0;
+   width:90%;
+   max-width:550px;
+   margin:0 auto;
+   justify-content: center;
+   align-items: center;
+   gap: 0 10px; 
+   margin-bottom: 3rem;
+   /* margin-top: -80%; */
+   /* border: 1px solid red; */
+   display: flex;
+}
+
+.form-container.active{
+   /* display: flex; */
+   /* scale: 1; */
+   opacity: 1;
+   /* border: 1px solid red; */
+  
+   
+}
+.form-container input{
+   all:unset;
+    width: calc(100% - 80px);
+    height:40px;
+    padding: 0 20px;
+    background-color:rgba(219, 226, 239, 0.5);
+    border-radius: 10px;
+    margin-top: -95%;
+}
+.form-container input::placeholder{
+   color: rgba(255, 255, 255, 0.7);
+}
+
+.form-container input:focus{
+   outline: 3px solid rgba(255, 255, 255, 0.7);
+}
+
+.form-container .searchWeatherButton {
+   padding:unset;
+   all:unset;
+   width: 40px;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: 100%;
+   margin-bottom:1px;
+   cursor: pointer;
+   background-color: var(--colorDark2);
+   margin-top: -95%;
+}

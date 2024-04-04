@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="WeatherApp.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="weather.webp">
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="inner-wrapper">
+        <h1>Weather App </h1>
+
+        <div class="tab-container">
+            <p class="tab" data-userWeather>User Weather</p>
+            <p class="tab" data-searchWeather>Search Weather</p>
+        </div>
+        <div class="weather-container">
+            <!-- grant location container -->
+
+            <div class="Sub-container grant-location-container">
+                <img src="location.png" alt="image is not availbale" width="80" height="80" loading="lazy">
+                <p id="firstLine">Grant Location Access</p>
+                <p>Allow access to get weather information </p>
+                <button class="btn" data-grantAccess>Grant Access</button>
+            </div>
+
+            <!-- search weather form -->
+ 
+            <div class="form-container" data-searchweather>
+                <input  placeholder="Enter your city" data-searchInput>
+                <button class="searchWeatherButton" data-weathersearchbtn>
+                    <img src="search.png" alt="image is not available" width="20" height="20" loading="lazy">
+                </button>
+            </div>
+
+
+            <!-- loading screen container -->
+
+            <div class="Sub-container loading-container">
+                <img src="loading.gif" alt="gif is not loading" width="150" height="150">
+                <p>Loading</p>
+            </div>
+             
+
+            <!-- Your Weather -->
+
+            <div class="Sub-container user-info-container">
+
+                <!-- city name and flag image -->
+                <div class="name">
+                    <p data-cityName></p>
+                    <img src="" alt="" data-countryIcon>
+                </div>
+ 
+                <!-- weather detail -->
+                <p data-weatherDesc class="weatherDetail"></p>
+
+                <!-- weather Icon -->
+                <img src="" alt="" class="weatherIcon" data-weatherIcon >
+
+                <!-- temperatur detail -->
+
+                <p data-temp class="tempratureDetail"></p>
+
+                <!-- 3 cards parameter -->
+
+                <div class="parameter-container">
+
+                    <!-- card 1 -->
+                    <div class="Sub-container parameter">
+                        <img src="wind.png" alt="image is not available">
+                        <p>Wind Speed</p>
+                        <p data-windSpeed></p>
+                    </div>
+
+                    <!-- card 2 -->
+                    <div class="Sub-container parameter">
+                        <img src="humidity.png" alt="image is not available">
+                        <p>Humidity</p>
+                        <p data-Humidity></p>
+                    </div>
+
+                    <!-- card 3 -->
+                    <div class=" Sub-container parameter">
+                        <img src="cloud.png" alt="image is not available">
+                        <p>Clouds</p>
+                        <p data-cloud></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+ 
+    <Script src="WeatherApp.js"></Script>
+    
+</body>
+</html> 
